@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+ul.top {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.top li {float: left;}
+
+ul.top li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.top li a:hover:not(.active) {background-color: rgba(14, 136, 230, 0.73);}
+
+ul.top li a.active {background-color: rgba(14, 136, 230, 0.73);}
+
+ul.top li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.top li.right, 
+  ul.top li {float: none;}
+}
+ul.top{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+.top img {
+  float: left;
+  width: 100px;
+  height: 50px;
+  background: #555;
+
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  opacity: 1.0;
+}
+
+.column:hover {
+  border: 1px solid #777;
+  opacity: 0.5;
+}
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.contact{
+  width: 100%
+  color: white;
+  background-color: lightblue;
+  padding: 50px;
+}
+</style>
+<body>
+<title>Blue Bus</title>
+<div class="header">
+  <h1>BLUE BUS</h1>
+</div>
+<ul class="top">
+  <img src="logo.jpg" alt="logo"/>
+  <li><a class="slide" href="#slide">HOME</a></li>
+  <li><a href="booking.html"><i class="BOOKING"></i>BOOKING</a>
+  <li><a href="footer.html"><i class="Footer"></i>HELP?</a>
+  <li style="float:right"><a href="#about">ABOUT</a></li>
+  
+</ul>
+<!----------------------------------------------------------------------------->
+<div class="slideshow-container" id="slide">
+<section>
+  <img class="mySlides" src="blue.jpg" style="width:100%">
+  <img class="mySlides" src="b6.jpg" style="width:100%">
+  <img class="mySlides" src="b4.jpg" style="width:100%">
+</section>
+</div>
+<!----------------------------------------------------------------------------->
+<div id="about"></div>
+<table>
+ <tr>
+  <td align="center">
+   <a href="blue 1.jpg">
+      <img src="blue 1.jpg" style="width:100%">
+   </a>
+  </td>
+ </tr>
+<!---------------------------------------------------------------------------->
+<div id="about"></div>
+<table>
+ <tr>
+  <td align="center">
+   <a href="country.png">
+      <img src="country.png" style="width:100%">
+   </a>
+  </td>
+ </tr>
+<!-------------------------------------------------------------------------------->
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+<!--------------------------------------------------------------------------->
+<footer>
+            <div id="contact">
+               <div class="contact">
+               <ul style="text-align:center;">
+			   <h3 style="text-align:center;">REACH US</h3>
+               <h4>bluebus@gmail.com</h4>
+               <h4>0452-1234567</h4>
+               </ul>
+               </div>
+               
+            </div>
+  </footer>
+</body>
+</html>
